@@ -5,7 +5,9 @@
   </div>
 </div>
 
-<div ng-repeat="product in products" class="">
+<input type="text" name="name" value="" ng-model="search">
+
+<div ng-repeat="product in products | filter:search" class="">
   <a href = "{{product.url}}"><p>Product: {{ product.title }}</p></a>
   <p>Price: ${{ product.price }}</p>
   <a href = "{{product.url}}"><img ng-src="{{product.MainImage.url_75x75}}" alt="" /></a>
