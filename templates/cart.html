@@ -1,0 +1,14 @@
+<div class="row">
+  <h1>Shopping Cart</h1>
+    <a href = "/#/products"><button type="button" class="btn btn-lg btn-warning">Back</button></a>
+</div>
+
+<div class="" ng-repeat="product in products">
+  <p>Product: {{ product.title }}</p>
+  <p>Price: ${{ product.price }}</p>
+  <button type="button" ng-click= 'deleteFromCart(product)' class="btn btn-lg btn-primary"name="button">Delete</button>
+</div>
+
+<div class="">
+  <p>Total: ${{ subTotal }}</p>
+</div>

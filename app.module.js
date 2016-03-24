@@ -18,4 +18,11 @@ angular
         templateUrl: "templates/cart.html",
         controller: "CartController"
       })
+      .when('/404', {
+        template: '<h1> Error </h1>',
+        controller: 'ShoppingController'
+      })
+      .otherwise({
+        redirectTo: '/404'
+      })
   })

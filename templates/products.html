@@ -1,13 +1,14 @@
 <div class="row">
   <h1>Esty Products</h1>
-  <!-- <div class="col-md-6">
-    <a href="/#/wanguls/new"><button type="button" class="btn btn-lg btn-primary"name="button">Create New</button></a>
-  </div> -->
+  <div class="col-md-6">
+    <a href = "/#/cart"><button type="button" class="btn btn-lg btn-primary">Shopping Cart</button></a>
+  </div>
 </div>
 
 <div ng-repeat="product in products" class="">
-  <p>Product: {{ product.title }}</p>
+  <a href = "{{product.url}}"><p>Product: {{ product.title }}</p></a>
   <p>Price: ${{ product.price }}</p>
-  <img ng-src="{{product.MainImage.url_75x75}}" alt="" />
+  <a href = "{{product.url}}"><img ng-src="{{product.MainImage.url_75x75}}" alt="" /></a>
   <a href="/#/product/{{product.listing_id}}"><button type="button" name="button">Info</button></a>
+  <button ng-class="{'font-red': product.isClicked }" ng-click= 'addToCart(product); productClick(product)' type="button" name="button">Add to Cart</button>
 </div>

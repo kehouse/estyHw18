@@ -1,14 +1,13 @@
 <div class="row">
   <h1>Esty Product</h1>
-  <!-- <div class="col-md-6">
-    <a href="/#/wanguls/new"><button type="button" class="btn btn-lg btn-primary"name="button">Create New</button></a>
-  </div> -->
+  <a href = "/#/products"><button type="button" class="btn btn-lg btn-warning">Back</button></a>
+  <a href = "/#/cart"><button type="button" class="btn btn-lg btn-primary">Go to Cart</button></a>
 </div>
 
 <div class="">
-  <p>Product: {{ product.title }}</p>
+  <a href = "{{product.url}}"><p>Product: {{ product.title }}</p></a>
   <p>Price: ${{ product.price }}</p>
   <p>Description: {{ product.description}}</p>
-  <img ng-src="{{product.MainImage.url_75x75}}" alt="" />
-
+  <p ng-repeat="material in product.materials"> Materials Used: {{ material || "no materials listed" }} </p>
+  <a href = "{{product.url}}"><img ng-src="{{product.MainImage.url_fullxfull}}" charset="utf-8"/></a>
 </div>
