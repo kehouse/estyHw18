@@ -1,0 +1,10 @@
+div .homepage {
+  height: 45em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homepage img {
+  margin: 0;
+}
